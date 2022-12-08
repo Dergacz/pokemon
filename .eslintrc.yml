@@ -11,5 +11,5 @@ plugins:
   - react
   - '@typescript-eslint'
 rules: {
-  indent: ['space', 4]
+  indent: ['space', 2]
 }
