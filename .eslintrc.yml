@@ -13,3 +13,6 @@ plugins:
   - react
   - '@typescript-eslint'
   - 'import'
+rules:
+  eol-last: ["error", "always"]
+  indent: ['error', 2]
