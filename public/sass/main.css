@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: #F7F7F7;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.main-page-search {
+  padding: 0 16px;
+}
+.main-page-pagination {
+  text-align: center;
+}
+
+.pokemon-card-wrapper {
+  border: 1px solid #F57D31;
+}
+.pokemon-card-id-wrapper {
+  justify-content: end !important;
+  padding-bottom: 0 !important;
+  color: #F57D31 !important;
+}
+.pokemon-card-footer {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  background-color: #F57D31;
+}
+.pokemon-card-name {
+  color: #FFFFFF;
+}
+.pokemon-card-name:first-letter {
+  text-transform: uppercase;
+}
+
+.pokemon-container {
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F57D31;
+  border-radius: 16px;
+  position: relative;
+}
+.pokemon-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px 24px 0 24px;
+  color: #FFFFFF;
+}
+.pokemon-arrow {
+  cursor: pointer;
+}
+.pokemon-name {
+  margin-left: 16px;
+  font-weight: 700;
+  font-size: 24px;
+}
+.pokemon-name:first-letter {
+  text-transform: uppercase;
+}
+.pokemon-img {
+  position: absolute;
+  top: 87px;
+  width: 200px;
+  height: 200px;
+}
+.pokemon-stats {
+  background-color: #FFFFFF;
+  border: 4px solid #F57D31;
+  border-radius: 8px;
+  width: 100%;
+  height: 412px;
+  padding: 56px 20px 44px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pokemon-spell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 8px;
+  background-color: #F57D31;
+  border-radius: 15px;
+}
+.pokemon-spell-name {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.pokemon-spell-name:first-letter {
+  text-transform: uppercase;
+}
+.pokemon-about-title {
+  margin-top: 16px;
+  color: #F57D31;
+}
+.pokemon-about-wrapper {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  width: 261px;
+}
+.pokemon-about-subtitle {
+  font-weight: 400;
+  font-size: 12px;
+  color: #666666;
+}
+.pokemon-description {
+  margin-top: 16px;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.header-logo {
+  width: 24px;
+  height: 24px;
+}
+.header-title {
+  margin-left: 16px;
+  color: #212121;
+}
+
+/*# sourceMappingURL=main.css.map */
