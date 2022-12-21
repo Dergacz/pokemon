@@ -1,7 +1,9 @@
-import * as React from 'react';
+import React from 'react';
+import { MainPage } from './src/scenes/MainPage/MainPage';
+
 function App() {
-    return (
-        <div>{'react setup from scratch without cra testing ts'}</div>
-    );
+  return (
+    <MainPage />
+  );
 }
 export default App;
