@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
   mode: 'development',
   entry: './main.tsx',
@@ -7,6 +9,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
+    assetModuleFilename: 'assets/[name][ext]',
   },
   devServer: {
     static: './dist',
@@ -23,6 +26,14 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test:/\.(s*)css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(jpg|png|svg|jpeg|gif)$/,
+        type: 'asset/resource',
+      },
     ],
   },
   resolve: {
@@ -32,5 +43,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html',
     }),
+    new MiniCssExtractPlugin(),
   ],
 };
