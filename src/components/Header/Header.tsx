@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 
+const logo = require('../../../public/images/Pokeball.png');
+
 const Header: FC = () => {
-  const logo = require('../../../public/images/Pokeball.png');
   return (
     <div className="header-wrapper">
       <img 
