@@ -1,25 +1,38 @@
 import React, { FC } from 'react';
 import { pokemonApi } from '../../services/PokemonServiceApi';
-import { Pokemon } from '../Pokemon/Pokemon';
+import { PokemonCard } from '../PokemonCard/PokemonCard';
+import { Grid, Loading } from '@nextui-org/react';
+import { Link } from 'react-router-dom';
 
 export const PokemonList: FC = () => {
-  const { data: pokemons, isLoading } = pokemonApi.useFetchAllPokemonQuery(100);
+  const { data: pokemons, isLoading } = pokemonApi.useFetchAllPokemonQuery(9);
+
   return (
-    <div>
+    <div className="pokemon-list-wrapper">
       {
         isLoading && (
-          <p>Loading...</p>
+          <Loading size="xl" />
         )
       }
-      {
-        !isLoading && pokemons.results.map(pokemon => (
-          <Pokemon
-            key={pokemon.url}
-            name={pokemon.name}
-            url={pokemon.url}
-          />
-        ))
-      }
+      <Grid.Container gap={2}>
+        {
+          !isLoading && pokemons.results.map(pokemon => {
+            return (
+              <Grid
+                xs={4}
+                key={pokemon.url}
+              >
+                <Link to={pokemon.name}>
+                  <PokemonCard
+                    name={pokemon.name}
+                    url={pokemon.url}
+                  />
+                </Link>
+              </Grid>
+            );
+          })
+        }
+      </Grid.Container>
     </div>
   );
 };

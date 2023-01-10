@@ -1,0 +1,26 @@
+.pokemon-card {
+  &-wrapper {
+    border: 1px solid $fire;
+  }
+
+  &-id-wrapper {
+    justify-content: end !important;
+    padding-bottom: 0 !important;
+    color: $fire !important;
+  }
+
+  &-footer {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    background-color: $fire;
+  }
+
+  &-name {
+    color: $white;
+  }
+
+  &-name:first-letter {
+    text-transform: uppercase;
+  }
+}
